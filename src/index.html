@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <meta name="title" content="Заголовок">
+    <meta name="description" content="Онисание">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Заголовок">
+    <meta property="og:description" content="Онисание">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Заголовок">
+    <meta property="twitter:description" content="Онисание">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Favicon  -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+
+        <div class="sidebar">
+            <div class="sidebar-top">
+                <a href="#" class="sidebar-logo"><img src="img/sidebar-logo.svg" alt="Logo"> <div class="sidebar-logo__text">Dashboard<span>v.01</span></div>
+                </a>
+
+                <ul class="sidebar-list">
+                    <li class="sidebar-list__item">
+                        <a href="#">
+                            <img src="img/sidebar-list_1.png" alt="" class="sidebar-list__icon">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-list__item">
+                        <a href="#">
+                           <img src="img/sidebar-list_2.png" alt="" class="sidebar-list__icon">
+                            Product 
+                        </a> 
+                        <svg class="sidebar-list__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
+                    </li>
+                    <li class="sidebar-list__item sidebar-list__item--active">
+                        <a href="#">
+                            <img src="img/sidebar-list_3.png" alt="" class="sidebar-list__icon"> Customers
+                        </a>
+                        <svg class="sidebar-list__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+                    </li>
+                    <li class="sidebar-list__item">
+                        <a href="#">
+                            <img src="img/sidebar-list_4.png" alt="" class="sidebar-list__icon">
+                            Income
+                        </a>
+                        <svg class="sidebar-list__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+                    </li>
+                    <li class="sidebar-list__item">
+                        <a href="#">
+                            <img src="img/sidebar-list_5.png" alt="" class="sidebar-list__icon">                              
+                            Promote 
+                        </a>
+                        <svg class="sidebar-list__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
+                    </li>
+                    <li class="sidebar-list__item">
+                        <a href="#">
+                            <img src="img/sidebar-list_6.png" alt="" class="sidebar-list__icon">    
+                            Help
+                        </a>
+                        <svg class="sidebar-list__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-user">
+                <div class="sidebar-user__image">
+                    <img src="img/user-image.png" alt="">
+                </div>
+                <div class="sidebar-user__text">
+                    <div class="sidebar-user__name">
+                        Evano
+                    </div>
+                    <div class="sidebar-user__job">
+                        Project Manager
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-nav">
+                <span>Hello Evano 👋🏼,</span>
+            </div>
+
+            <div class="dash">
+                <div class="dash-nav">
+                    <div class="dash-nav__text">
+                        <div class="dash-title">
+                            All Customers
+                        </div>
+                        <div class="dash-subtitle">
+                            Active Members
+                        </div>
+                    </div>
+                    <label for="dashSearch">
+                        <img class="dash-search__image" src="img/dash-search.svg" alt="Search">
+                        <input onkeyup="tableSearch()" placeholder="Search" class="dash-search" type="search" name="dashSearch" id="">
+                    </label>
+                   
+                </div>
+                <div class="dash-body">
+    
+    <!-- HTML Code: Place this code in the document's body (between the <body> tags) where the table should appear -->
+    <table  class="dash-table">
+      <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>Company</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="table">
+        <tr>
+          <td class="dash-table__item dash-table__name">Jane Cooper</td>
+          <td class="dash-table__item dash-table__company">Microsoft</td>
+          <td class="dash-table__item dash-table__number">(225) 555-0118</td>
+          <td class="dash-table__item dash-table__emal">jane@microsoft.com</td>
+          <td class="dash-table__item dash-table__country">United States</td>
+          <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Floyd Miles</td>
+            <td class="dash-table__item dash-table__company">Yahoo</td>
+            <td class="dash-table__item dash-table__number">(205) 555-0100</td>
+            <td class="dash-table__item dash-table__emal">floyd@yahoo.com</td>
+            <td class="dash-table__item dash-table__country">Kiribati</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn">Inactive</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Ronald Richards</td>
+            <td class="dash-table__item dash-table__company">Adobe</td>
+            <td class="dash-table__item dash-table__number">(302) 555-0107</td>
+            <td class="dash-table__item dash-table__emal">ronald@adobe.com</td>
+            <td class="dash-table__item dash-table__country">Israel</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn">Inactive</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Marvin McKinney</td>
+            <td class="dash-table__item dash-table__company">Tesla</td>
+            <td class="dash-table__item dash-table__number">(252) 555-0126</td>
+            <td class="dash-table__item dash-table__emal">marvin@tesla.com</td>
+            <td class="dash-table__item dash-table__country">Iran</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Jerome Bell</td>
+            <td class="dash-table__item dash-table__company">Google</td>
+            <td class="dash-table__item dash-table__number">(629) 555-0129</td>
+            <td class="dash-table__item dash-table__emal">jerome@google.com</td>
+            <td class="dash-table__item dash-table__country">Réunion</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Kathryn Murphy</td>
+            <td class="dash-table__item dash-table__company">Microsoft</td>
+            <td class="dash-table__item dash-table__number">(406) 555-0120</td>
+            <td class="dash-table__item dash-table__emal">kathryn@microsoft.com</td>
+            <td class="dash-table__item dash-table__country">Curaçao</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Jacob Jones</td>
+            <td class="dash-table__item dash-table__company">Yahoo</td>
+            <td class="dash-table__item dash-table__number">(208) 555-0112</td>
+            <td class="dash-table__item dash-table__emal">jacob@yahoo.com</td>
+            <td class="dash-table__item dash-table__country">Brazil</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Kristin Watson</td>
+            <td class="dash-table__item dash-table__company">Facebook</td>
+            <td class="dash-table__item dash-table__number">(704) 555-0127</td>
+            <td class="dash-table__item dash-table__emal">kristin@facebook.com</td>
+            <td class="dash-table__item dash-table__country">Åland Islands</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn">Inactive</span></td>
+        </tr>
+
+        <tr>
+            <td class="dash-table__item dash-table__name">Jacob Jones</td>
+            <td class="dash-table__item dash-table__company">Yahoo</td>
+            <td class="dash-table__item dash-table__number">(208) 555-0112</td>
+            <td class="dash-table__item dash-table__emal">jacob@yahoo.com</td>
+            <td class="dash-table__item dash-table__country">Brazil</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Kristin Watson</td>
+            <td class="dash-table__item dash-table__company">Facebook</td>
+            <td class="dash-table__item dash-table__number">(704) 555-0127</td>
+            <td class="dash-table__item dash-table__emal">kristin@facebook.com</td>
+            <td class="dash-table__item dash-table__country">Åland Islands</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn">Inactive</span></td>
+        </tr>
+
+        <tr>
+            <td class="dash-table__item dash-table__name">Jacob Jones</td>
+            <td class="dash-table__item dash-table__company">Yahoo</td>
+            <td class="dash-table__item dash-table__number">(208) 555-0112</td>
+            <td class="dash-table__item dash-table__emal">jacob@yahoo.com</td>
+            <td class="dash-table__item dash-table__country">Brazil</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Kristin Watson</td>
+            <td class="dash-table__item dash-table__company">Facebook</td>
+            <td class="dash-table__item dash-table__number">(704) 555-0127</td>
+            <td class="dash-table__item dash-table__emal">kristin@facebook.com</td>
+            <td class="dash-table__item dash-table__country">Åland Islands</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn">Inactive</span></td>
+        </tr>
+
+        <tr>
+            <td class="dash-table__item dash-table__name">Jacob Jones</td>
+            <td class="dash-table__item dash-table__company">Yahoo</td>
+            <td class="dash-table__item dash-table__number">(208) 555-0112</td>
+            <td class="dash-table__item dash-table__emal">jacob@yahoo.com</td>
+            <td class="dash-table__item dash-table__country">Brazil</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn dash-btn_active">Active</span></td>
+        </tr>
+        <tr>
+            <td class="dash-table__item dash-table__name">Kristin Watson</td>
+            <td class="dash-table__item dash-table__company">Facebook</td>
+            <td class="dash-table__item dash-table__number">(704) 555-0127</td>
+            <td class="dash-table__item dash-table__emal">kristin@facebook.com</td>
+            <td class="dash-table__item dash-table__country">Åland Islands</td>
+            <td class="dash-table__item dash-table__btn"><span class="dash-btn">Inactive</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+</div>
+                <div class="dash-bottom">
+                    <div class="dash-bottom__info">
+                        Showing data 1 to 8 of  256K entries
+                    </div>
+                    <ul class="dash-pag" id="pagination">
+                        <li class="dec">left</li>
+
+                        <li>right</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
