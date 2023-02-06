@@ -134,7 +134,9 @@ let table = document.querySelector('#table');
 let pagination = document.querySelector('#pagination');
 let notesOnPage = 8;
 let countOfItems = Math.ceil(users.length / notesOnPage);
-let dec = document.querySelector('.dec');
+let dashInfoStart = document.querySelector('.dash__info-start'),
+    dashInfoEnd = document.querySelector('.dash__info-end'),
+    dashInfoAll = document.querySelector('.dash__info-all');
 
 let showPage = (function() {
 	let active;
@@ -146,9 +148,7 @@ let showPage = (function() {
 		active = item;
 		
 		item.classList.add('dash-pag_active');
-		console.log(item)
 		let pageNum = +item.innerHTML;
-    // let pageNum = -1;
 		
 		let start = (pageNum - 1) * notesOnPage;
 		let end = start + notesOnPage;
@@ -160,9 +160,6 @@ let showPage = (function() {
     let btnAct = `<span class="dash-btn dash-btn_active">Active</span>`;
     let btnDis = `<span class="dash-btn">Inactive</span>`
 		for (let note of notes) {
-
-
-
 			let tr = document.createElement('tr');
 			table.appendChild(tr);
 			
@@ -173,6 +170,10 @@ let showPage = (function() {
 			createCell(note.country, tr);
       createCell(note.status ? btnAct : btnDis, tr);
 		}
+
+    dashInfoStart.innerHTML = `${start + 1}`;
+    dashInfoEnd.innerHTML = `${end}`;
+    dashInfoAll.innerHTML = `${users.length}`;
 	};
 }());
 
@@ -192,22 +193,18 @@ for (let item of items) {
 	item.addEventListener('click', function() {
 		showPage(this);
 	});
-  dec.addEventListener('click', () => {
-    showPage(0);
-    console.log('jjj')
-  });
 }
 
 function createCell(text, tr) {
 	let td = document.createElement('td');
+  td.classList.add('dash-table__item');
 	td.innerHTML = text;
 	tr.appendChild(td);
-
 }
 // Search
 function tableSearch() {
   let table = document.querySelector('.dash-table');
-  let  phrase = document.querySelector('.dash-search');
+  let phrase = document.querySelector('.dash-search');
   let regPhrase = new RegExp(phrase.value, 'i');
   let flag = false;
   for (var i = 1; i < table.rows.length; i++) {
@@ -224,3 +221,10 @@ function tableSearch() {
 
   }
 }
+
+let trigger = document.querySelector('.burger'),
+    mobMenu = document.querySelector('.sidebar');
+
+trigger.addEventListener('click', () => {
+  mobMenu.classList.toggle('sidebar--active');
+})

@@ -55,20 +55,22 @@
     width: 100%;
     background-color: #FFFFFF;
     color: #000000;
-    &__name {
-      width: 170px;
-    }
-    &__company {
-        width: 132px;
-    }
-    &__number {
-        width: 155px;
-    }
-    &__emal {
-        width: 207px;
-    }
-    &__country {
-      width: 141.3px;
+    &__item {
+      &:nth-child(1) {
+        width: 170px;
+      }
+      &:nth-child(2) {
+          width: 132px;
+      }
+      &:nth-child(3) {
+          width: 155px;
+      }
+      &:nth-child(4) {
+          width: 207px;
+      }
+      &:nth-child(5) {
+        width: 141.3px;
+      }
     }
 
     td,th {
@@ -111,12 +113,12 @@
       &::before {
         content: '';
         height: 1px;
-        width: 200%;
+        width: 100%;
         background-color: #EEEEEE;
         position: absolute;
       }
       &::before {
-        left: -100px;
+        left: 0px;
         bottom: 0;
       }
     }

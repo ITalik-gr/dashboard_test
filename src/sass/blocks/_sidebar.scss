@@ -1,6 +1,6 @@
 .sidebar {
   padding: 36px 28px 78px 28px;
-  max-width: 306px;
+  max-width: 336px;
   width: 100%;
   height: 1198px;
   background: #FFFFFF;
@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  transition: .5s all;
   &-top {
     width: 100%;
     display: flex;
@@ -48,7 +49,7 @@
     &__item {
       margin-bottom: 18.2px;
       padding: 11px 8px 11px 10px;
-      max-width: 250px;
+      max-width: 280px;
       border-radius: 8px;
       @include dfsb;
       transition: .4s all;
@@ -104,6 +105,9 @@
   }
   &-user {
     @include dfc;
+    &:hover {
+      text-decoration: none;
+    }
     &__image {
       img {
         max-width: 42px;
@@ -128,5 +132,9 @@
       color: #757575;
     }
   }
-
+  &--active {
+    transform: translateX(0)!important;
+    visibility: visible!important;
+    opacity: 1!important;
+  }
 }
